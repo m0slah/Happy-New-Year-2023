@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Roboto:ital@1&display=swap');
+
+* {
+    background-color: #222222;
+}
+
+
+.main {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    top: 100px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    top: 65px;
+    height: 4px;
+    width: calc(100% - 1000px);
+    transition: 0.5s;
+    background-color: red;
+    box-shadow: 0 0 5px #ff0000,
+        0 0 15px #ff0000,
+        0 0 30px #ff0000,
+        0 0 60px #ff0000;
+}
+
+.title:hover::before {
+    background: rgb(2, 255, 23);
+    box-shadow: 0 0 5px rgb(2, 255, 23),
+        0 0 15px rgb(2, 255, 23),
+        0 0 30px rgb(2, 255, 23),
+        0 0 60px rgb(2, 255, 23);
+}
+
+.title::after {
+    content: '2 😔';
+    transition: 0.5s;
+}
+
+.title:hover::after {
+    content: '3 🤩';
+    color: rgb(2, 255, 23);
+}
